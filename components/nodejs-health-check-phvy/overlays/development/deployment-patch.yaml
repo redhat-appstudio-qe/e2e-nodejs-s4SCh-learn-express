@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-phvy
+  namespace: e2e-demos-boxo-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:f914240e0e4d34c38a8c12c11cd56cb82ec85187b51f60dc6880b72d4558bd12
+        name: my-nodejs
+        resources: {}
+status: {}
